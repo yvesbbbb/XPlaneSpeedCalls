@@ -1,0 +1,19 @@
+﻿  SpeedCalls.cpp
+e:\mes documents\fs\xplane\xplanecode\speed&call\speedcalls.cpp(190): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+     Creating library .\Release\64\OpenAL-Example.lib and object .\Release\64\OpenAL-Example.exp
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alGetError referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPEAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alGenSources referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPEAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alSourcef referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPEAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alSourcefv referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPEAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alSourcei referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPEAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alSourcePlay referenced in function "void __cdecl playSound(void)" (?playSound@@YAXXZ)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alGenBuffers referenced in function "unsigned int __cdecl load_wave(char const *)" (?load_wave@@YAIPEBD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alBufferData referenced in function "unsigned int __cdecl load_wave(char const *)" (?load_wave@@YAIPEBD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alcCreateContext referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPEAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alcMakeContextCurrent referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPEAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alcDestroyContext referenced in function XPluginStop
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alcGetCurrentContext referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPEAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alcOpenDevice referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPEAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp_alcCloseDevice referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPEAD@Z)
+E:\AppAutonomes\OpenAL\libs\Win32\OpenAL32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+.\Release\plugins\SpeedCalls\64\win.xpl : fatal error LNK1120: 14 unresolved externals

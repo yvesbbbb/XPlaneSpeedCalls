@@ -1,0 +1,12 @@
+﻿  SpeedCalls.cpp
+     Creating library .\Release\64\OpenAL-Example.lib and object .\Release\64\OpenAL-Example.exp
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp__XPLMGetDirectorySeparator referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp__XPLMDebugString referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp__XPLMRegisterFlightLoopCallback referenced in function _XPluginStart
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp__XPLMFindDataRef referenced in function _XPluginStart
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp__XPLMGetDataf referenced in function "float __cdecl MyFlightLoopCallback(float,float,int,void *)" (?MyFlightLoopCallback@@YAMMMHPAX@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp__XPLMGetMyID referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPAD@Z)
+SpeedCalls.obj : error LNK2019: unresolved external symbol __imp__XPLMGetPluginInfo referenced in function "float __cdecl init_sound(char *)" (?init_sound@@YAMPAD@Z)
+SDK\Libraries\Win\XPLM_64.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+SDK\Libraries\Win\XPWidgets_64.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+E:\Mes documents\FS\Xplane\XplaneCode\SpeedCalls\Release\win.xpl : fatal error LNK1120: 7 unresolved externals
