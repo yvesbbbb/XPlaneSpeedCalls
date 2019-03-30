@@ -15,6 +15,6 @@ Derived from https://developer.x-plane.com/code-sample/openal-example/
 
 To install the Windows version, just copy Release/plugins/SpeedCalls in the XPlane 11 ressources plugin directory
 
-For the other versions, Mac and Linux, just recompile TODChecking.cpp with an appropriate compiler
+For the other versions, Mac and Linux, just recompile SpeedCalls.cpp with an appropriate compiler
 
 # SpeedCalls
