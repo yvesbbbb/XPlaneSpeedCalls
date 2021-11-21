@@ -1,4 +1,4 @@
-﻿// Downloaded from https://developer.x-plane.com/code-sample/openal-example/
+// Downloaded from https://developer.x-plane.com/code-sample/openal-example/
 
 #include <stdio.h>
 #include <string.h>
@@ -662,6 +662,35 @@ void speedCalculation() {
 		}
 	}
 
+	else if ((strstr(AircraftIdentity, "B752") != NULL))
+	{
+		// from the table : https://community.infiniteflight.com/t/boeing-b757-200-performance-charts/534873
+
+		int takeOffWeight = ((int)XPLMGetDataf(gDataRefTakeOffWeight) * 2.20462f) / 1000;  // table in LBS
+		float levelFlaps = XPLMGetDataf(gDataRefFlaps);
+
+		if (levelFlaps > .3f  && levelFlaps < .4f)				// flaps 5
+		{
+			// Le coefficient de corrélation est r = 0.99910392134243
+
+			V1 = (int)(0.45833333333333 * takeOffWeight + 48.25);   // tables are in LBS
+			VR = (int)(0.45833333333333 * takeOffWeight + 51.25);
+			V2 = (int)(0.36309523809524 * takeOffWeight + 75.071428571429);
+		}
+		else if (levelFlaps > .45f && levelFlaps < .6f)					// flaps 15
+		{
+			V1 = (int)(0.42857142857143 * takeOffWeight + 46.857142857143);
+			VR = (int)(0.41785714285714 * takeOffWeight + 52.142857142857);
+			V2 = (int)(0.36071428571429 * takeOffWeight + 68);
+		}
+		else															// flaps 20 
+		{
+			V1 = (int)(0.4 * takeOffWeight + 45);
+			VR = (int)(0.4 * takeOffWeight + 48);
+			V2 = (int)(0.33928571428571 * takeOffWeight + 65.285714285714);
+		}
+	}
+
 	else if ((strstr(AircraftIdentity, "B738") != NULL))
 	{
 		// from the table :  https://fr.scribd.com/document/356588839/Delta-Virtual-Airline-B737-Manual-pdf
@@ -690,6 +719,22 @@ void speedCalculation() {
 		V2 = (int)(1.5571428571429 * takeOffWeight + 78.780952380952);
 
 	}
+	else if ((strstr(AircraftIdentity, "MD82") != NULL))
+	{
+
+		// from the table :  http://www.dream-air.ru/new/pilotam/CL300AFM_Rev10_TR49.pdf
+
+		// Le coefficient de corrélation est r = 0.99773567023206
+
+		int takeOffWeight = ((int)XPLMGetDataf(gDataRefTakeOffWeight) * 2.20462f) / 1000;  // table in LBS
+		float levelFlaps = XPLMGetDataf(gDataRefFlaps);
+
+		V1 = (int)(2.4714285714286 * takeOffWeight + 37.942857142857);   // flaps 10
+		VR = (int)(2.2857142857143 * takeOffWeight + 46.238095238095);
+		V2 = (int)(1.5571428571429 * takeOffWeight + 78.780952380952);
+
+	}
+
 	else {
 
 		V1 = -999;    // no data
